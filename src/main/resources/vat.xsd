@@ -1,0 +1,32 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://gb.com/hiring-exercise"
+           targetNamespace="http://gb.com/hiring-exercise" elementFormDefault="qualified">
+
+    <xs:element name="getVatRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="vatRate" type="xs:int"/>
+                <xs:element name="vatAmount" type="xs:double" nillable="true"/>
+                <xs:element name="netAmount" type="xs:double" nillable="true"/>
+                <xs:element name="grossAmount" type="xs:double" nillable="true"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getVatResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="vat" type="tns:vat"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="vat">
+        <xs:sequence>
+            <xs:element name="vatRate" type="xs:int"/>
+            <xs:element name="vatAmount" type="xs:double"/>
+            <xs:element name="netAmount" type="xs:double"/>
+            <xs:element name="grossAmount" type="xs:double"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>
