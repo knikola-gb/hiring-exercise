@@ -26,7 +26,7 @@ http://www.calkoo.com/?lang=3&page=8
 
 Implementation notes
 --------------------
-- Used pure Spring (Spring Boot) as core technology for implemeting defined requirement (not third party libs used). From what I understood during the first-round interview with Mr. Kiss, Global Blue uses Spring Boot for new projects, therefore I tried to implement everything (and at the same time introduce myself to Spring Boot) using Spring only (otherwise, probably other technologies, eg. Apache CXF would be used).
+- Used pure Spring (Spring Boot) as core technology for implemeting defined requirement (not third party libs used). From what I understood during the first-round interview with Mr. Kiss, Global Blue uses Spring Boot for new projects, therefore I tried to implement everything (and at the same time introduce myself to Spring Boot more closely) using Spring only (otherwise, probably other technologies, eg. Apache CXF would be used).
 
 - Provided SOAP/REST APIs are basically using the same core logic defined in related service that calculates VAT
 - implemented JUnit tests (separate classes for SOAP/REST), which should cover test cases/scenarious from requirement
@@ -34,8 +34,8 @@ Implementation notes
 
 Notes
 -----
-- default port (8080) for Tomcat is overriden in application.properties file (since for m on Linux it was already used)
-- for running some of JUnittest, I had to also use annontation for setting-up the port (e.g. **@WebIntegrationTest(randomPort = true)** or **@WebIntegrationTest("server.port:8097"))**. Hope you'll have no issues running the tests.
+- default port (8080) for Tomcat is overriden in **application.properties** file (since for me on Linux it was already used)
+- for running some of JUnit tests, I had to also use annontation for setting-up the port (e.g. **@WebIntegrationTest(randomPort = true)** or **@WebIntegrationTest("server.port:8097"))**. Hope you'll have no issues running the tests.
 
 Additional Notes
 ----------------
